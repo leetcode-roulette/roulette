@@ -37,6 +37,12 @@
   "bugs": {
     "url": "https://github.com/leetcode-roulette/roulette/issues"
   },
+  "release": {
+    "branches": ["master"]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/leetcode-roulette/roulette#readme",
   "devDependencies": {
     "semantic-release": "^19.0.5",
