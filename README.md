@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to Leetcoderoulette Roulette 👋</h1>
 
 ![Build status](https://github.com/leetcode-roulette/roulette/actions/workflows/tests.yml/badge.svg)
-[![code coverage](https://codecov.io/gh/leetcode-roulette/roulette)](https://codecov.io/gh/leetcode-roulette/roulette/branch/master/graph/badge.svg)
+[![code coverage](https://codecov.io/gh/leetcode-roulette/roulette/branch/master/graph/badge.svg)](https://codecov.io/gh/leetcode-roulette/roulette)
 [![install size](https://packagephobia.com/badge?p=@leetcoderoulette/roulette)](https://packagephobia.com/result?p=@leetcoderoulette/roulette)
 
 > Roulette class that returns a random problem similar to a roulette table.
