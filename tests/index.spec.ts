@@ -19,3 +19,13 @@ test("Roulette pops off used problems", () => {
   expect(roulette.size).toBe(1);
   expect(roulette.problems).not.toContain(problem);
 });
+
+test("Can reset problemset", () => {
+  const roulette: Roulette<string> = new Roulette(["Hello"]);
+  expect(roulette.size).toBe(1);
+
+  roulette.problems = ["New", "World"];
+  expect(roulette.size).toBe(2);
+  expect(roulette.problems).not.toContain("Hello");
+  expect(roulette.problems).toContain("World");
+});

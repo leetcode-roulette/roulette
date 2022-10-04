@@ -18,7 +18,7 @@ export class Roulette<T> {
   }
 
   /**
-   * Gets a random problem from array of problems.
+   * Gets a random problem from problemset and deletes it.
    * @returns A random problem.
    */
   public get problem(): T {
@@ -36,7 +36,7 @@ export class Roulette<T> {
 
   /**
    * Gets the number of problems left in the problemset.
-   * @returns Number of problems left in the problemset.
+   * @returns Size of the problemset.
    */
   public get size(): number {
     return this.problemset.size;
