@@ -16,7 +16,7 @@
     "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
     "prepack": "npm run build",
     "test": "jest --passWithNoTests",
-    "test:ci": "jest --coverage && codecov",
+    "test:ci": "jest --coverage",
     "semantic-release": "semantic-release"
   },
   "repository": {
