@@ -1,6 +1,6 @@
 {
   "name": "@leetcoderoulette/roulette",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "https://leetcoderoulette.com roulette library",
   "types": "./lib/cjs/types/index.d.ts",
   "main": "./lib/cjs/index.js",
@@ -10,11 +10,12 @@
     "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
     "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
     "prepack": "npm run build",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leetcode-roulette/roulette.git"
+    "url": "https://github.com/leetcode-roulette/roulette.git"
   },
   "exports": {
     ".": {
