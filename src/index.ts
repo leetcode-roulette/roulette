@@ -22,13 +22,13 @@ export class Roulette<T> {
    * @returns A random problem.
    */
   public get problem(): T {
-    const index: number = Math.floor(Math.random() * this.problemset.size);
-    const problems: T[] = Array.from(this.problemset);
-    const problem: T | undefined = problems[index];
-
-    if (problem === undefined) {
+    if (this.problemset.size === 0) {
       throw Roulette.NO_PROBLEMS_ERROR;
     }
+
+    const index: number = Math.floor(Math.random() * this.problemset.size);
+    const problems: T[] = Array.from(this.problemset);
+    const problem: T = problems[index];
 
     this.problemset.delete(problem);
     return problem;

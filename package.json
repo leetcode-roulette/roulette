@@ -1,5 +1,6 @@
 {
   "name": "@leetcoderoulette/roulette",
+  "keywords": ["Leetcode", "Leetcode Roulette", "Roulette"],
   "version": "0.0.0-development",
   "description": "https://leetcoderoulette.com roulette library",
   "types": "./lib/cjs/types/index.d.ts",
