@@ -29,3 +29,11 @@ test("Can reset problemset", () => {
   expect(roulette.problems).not.toContain("Hello");
   expect(roulette.problems).toContain("World");
 });
+
+test("Empty initialized problemset errors out", () => {
+  expect(() => new Roulette([])).toThrow(Error);
+  
+  const roulette: Roulette<string> = new Roulette(["One item"]);
+  roulette.problem;
+  expect(() => roulette.problem).toThrow(Error);
+});
