@@ -1,5 +1,5 @@
 /**
-   * Roulette gets a random .
+   * Roulette class to get a random problem from an array of problems.
    */
 export declare class Roulette {
     /**
