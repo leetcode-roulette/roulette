@@ -11,7 +11,7 @@
 Using npm:
 
 ```bash
-$ npm install axios
+$ npm install @leetcoderoulette/roulette
 ```
 
 ## Example
