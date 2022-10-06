@@ -5,7 +5,7 @@
     "Leetcode Roulette",
     "Roulette"
   ],
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "https://leetcoderoulette.com roulette library",
   "types": "./lib/cjs/types/index.d.ts",
   "main": "./lib/cjs/index.js",
@@ -17,7 +17,8 @@
     "prepack": "npm run build",
     "test": "jest --passWithNoTests",
     "test:ci": "jest --coverage",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
