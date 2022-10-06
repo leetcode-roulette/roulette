@@ -1,4 +1,4 @@
-import { Roulette } from "../src";
+import Roulette from "../src";
 
 test("Gets a random problem from the problems array", () => {
   const problems: string[] = ["Hello", "World", "Random"];

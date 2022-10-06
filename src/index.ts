@@ -1,7 +1,7 @@
 /**
    * Roulette class to get a random problem from an array of problems.
    */
-export class Roulette<T> {
+export default class Roulette<T> {
   private static NO_PROBLEMS_ERROR: Error = new Error("Problemset is empty.");
   private problemset: Set<T>;
 
