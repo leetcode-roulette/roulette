@@ -5,7 +5,7 @@
     "Leetcode Roulette",
     "Roulette"
   ],
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "https://leetcoderoulette.com roulette library",
   "types": "./lib/cjs/types/index.d.ts",
   "main": "./lib/cjs/index.js",
