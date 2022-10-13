@@ -1,20 +1,25 @@
+import RouletteOptions, { DEFAULT_OPTIONS } from "./options";
+
 /**
    * Roulette class to get a random problem from an array of problems.
    */
 export default class Roulette<T> {
   private static NO_PROBLEMS_ERROR: Error = new Error("Problemset is empty.");
   private problemset: Set<T>;
+  private options: RouletteOptions = DEFAULT_OPTIONS;
 
   /**
    * Creates new Roulette instance with initial problemset.
    * @param problems Initial problemset.
+   * @param options Roulette options.
    */
-  constructor(problems: T[]) {
+  constructor(problems: T[], options?: Partial<RouletteOptions>) {
     if (problems.length === 0) {
       throw Roulette.NO_PROBLEMS_ERROR;
     }
 
     this.problemset = new Set(problems);
+    this.options = {...this.options, ...options};
   }
 
   /**
@@ -30,7 +35,10 @@ export default class Roulette<T> {
     const problems: T[] = Array.from(this.problemset);
     const problem: T = problems[index];
 
-    this.problemset.delete(problem);
+    if (this.options.popWhenGettingProblem) {
+      this.problemset.delete(problem);
+    }
+    
     return problem;
   }
 
@@ -54,10 +62,18 @@ export default class Roulette<T> {
    * Sets the problemset to the provided problems.
    */
   public set problems(problems: T[]) {
+    if (!this.options.enableProblemsetReset) {
+      throw new Error("Unable to reset problemset when enableProblemsetReset is false. Try changing this value to true.");
+    }
+
     if (problems.length === 0) {
       throw Roulette.NO_PROBLEMS_ERROR;
     }
 
     this.problemset = new Set(problems);
   }
+}
+
+export {
+  RouletteOptions
 }
