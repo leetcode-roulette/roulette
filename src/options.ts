@@ -14,8 +14,3 @@
    */
   enableProblemsetReset: boolean;
 };
-
-export const DEFAULT_OPTIONS: Options = {
-  popWhenGettingProblem: true,
-  enableProblemsetReset: true
-};

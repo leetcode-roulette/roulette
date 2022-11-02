@@ -1,4 +1,24 @@
-import RouletteOptions, { DEFAULT_OPTIONS } from "./options";
+/**
+ * Roulette options.
+ */
+interface RouletteOptions {
+  /**
+   * Boolean value that indicates if a problem should be removed from the problemset when it is retrieved.
+   * @default true
+   */
+  popWhenGettingProblem: boolean;
+
+  /**
+   * Boolean value that indicates if the problemset can be reset after initialization.
+   * @default true
+   */
+  enableProblemsetReset: boolean;
+};
+
+const DEFAULT_OPTIONS: RouletteOptions = {
+  popWhenGettingProblem: true,
+  enableProblemsetReset: true
+};
 
 /**
    * Roulette class to get a random problem from an array of problems.
