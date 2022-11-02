@@ -1,39 +1,39 @@
 import Roulette from "../src";
 
-test("Gets a random problem from the problems array", () => {
-  const problems: string[] = ["Hello", "World", "Random"];
-  const roulette: Roulette<string> = new Roulette(problems);
-  expect(problems).toContain(roulette.problem);
+test("Gets a random value from the values array", () => {
+  const values: string[] = ["Hello", "World", "Random"];
+  const roulette: Roulette<string> = new Roulette(values);
+  expect(values).toContain(roulette.pop());
 });
 
-test("Does not add duplicate problems", () => {
-  const problemsWithDuplicates: string[] = ["Hello", "Hello"];
-  const roulette: Roulette<string> = new Roulette(problemsWithDuplicates);
+test("Does not add duplicate values", () => {
+  const valuesWithDuplicates: string[] = ["Hello", "Hello"];
+  const roulette: Roulette<string> = new Roulette(valuesWithDuplicates);
   expect(roulette.size).toBe(1);
 });
 
-test("Roulette pops off used problems", () => {
-  const problems: string[] = ["Hello", "World"];
-  const roulette: Roulette<string> = new Roulette(problems);
-  const problem: string = roulette.problem;
+test("Roulette pops off used values", () => {
+  const values: string[] = ["Hello", "World"];
+  const roulette: Roulette<string> = new Roulette(values);
+  const value: string = roulette.pop();
   expect(roulette.size).toBe(1);
-  expect(roulette.problems).not.toContain(problem);
+  expect(roulette.values).not.toContain(value);
 });
 
-test("Can reset problemset", () => {
+test("Can reset set", () => {
   const roulette: Roulette<string> = new Roulette(["Hello"]);
   expect(roulette.size).toBe(1);
 
-  roulette.problems = ["New", "World"];
+  roulette.values = ["New", "World"];
   expect(roulette.size).toBe(2);
-  expect(roulette.problems).not.toContain("Hello");
-  expect(roulette.problems).toContain("World");
+  expect(roulette.values).not.toContain("Hello");
+  expect(roulette.values).toContain("World");
 });
 
-test("Empty initialized problemset errors out", () => {
+test("Empty initialized set errors out", () => {
   expect(() => new Roulette([])).toThrow(Error);
   
   const roulette: Roulette<string> = new Roulette(["One item"]);
-  roulette.problem;
-  expect(() => roulette.problem).toThrow(Error);
+  roulette.pop();
+  expect(() => roulette.pop()).toThrow(Error);
 });

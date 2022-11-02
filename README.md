@@ -4,7 +4,7 @@
 [![code coverage](https://codecov.io/gh/leetcode-roulette/roulette/branch/master/graph/badge.svg)](https://codecov.io/gh/leetcode-roulette/roulette)
 [![install size](https://packagephobia.com/badge?p=@leetcoderoulette/roulette)](https://packagephobia.com/result?p=@leetcoderoulette/roulette)
 
-> Roulette class that returns a random problem similar to a roulette table.
+> Roulette class that returns a random value similar to a roulette table.
 
 ## Installing
 
@@ -30,35 +30,35 @@ Creating a new Roulette object and getting problems
 ```js
 const roulette = new Roulette(["Hello", "World"]);
 
-const problems = roulette.problems; // Returns ["Hello", "World"]
-const problem = roulette.problem; // Returns either "Hello" or "World"
+const values = roulette.values; // Returns ["Hello", "World"]
+const value = roulette.pop(); // Returns either "Hello" or "World"
 ```
 
-Adding a new problemset
+Adding a new set
 
 ```js
-roulette.problems = ["New", "Problems"];
+roulette.values = ["New", "Problems"];
 
-const problems = roulette.problems; // Returns ["New", "Problems"]
+const values = roulette.values; // Returns ["New", "Problems"]
 ```
 
 ### Roulette API
-A roulette object can be made by passing in an array of problems to `Roulette`.
+A roulette object can be made by passing in an array of values to `Roulette`.
 
-##### Roulette(problems)
+##### Roulette(values, options?)
 
 ```js
 // Create a new Roulette object.
-new Roulette(["Problem1", "Problem2"]);
+new Roulette(["value1", "value2"]);
 ```
 
 ### Instance methods
 
 The available instance methods are listed below.
 
-##### get roulette.problem()
-##### get roulette.problems()
-##### set roulette.problems(problems)
+##### roulette.pop()
+##### get roulette.values()
+##### set roulette.values(values)
 
 ## TypeScript
 
@@ -67,10 +67,10 @@ Roulette includes [TypeScript](https://typescriptlang.org) definitions and a typ
 ```typescript
 let roulette: Roulette<string> = new Roulette(["Hello", "World"]);
 
-const problems: string[] = roulette.problems; // Returns ["Hello", "World"]
-const problem: string = roulette.problem; // Returns "Hello" or "World"
+const values: string[] = roulette.values; // Returns ["Hello", "World"]
+const value: string = roulette.pop(); // Returns "Hello" or "World"
 
-roulette.problems = ["New", "Problems"];
+roulette.values = ["New", "Problems"];
 ```
 
 ## 🤝 Contributing
