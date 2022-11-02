@@ -4,7 +4,7 @@
 [![code coverage](https://codecov.io/gh/leetcode-roulette/roulette/branch/master/graph/badge.svg)](https://codecov.io/gh/leetcode-roulette/roulette)
 [![install size](https://packagephobia.com/badge?p=@leetcoderoulette/roulette)](https://packagephobia.com/result?p=@leetcoderoulette/roulette)
 
-> Roulette class that returns a random problem similar to a roulette table.
+> Roulette class that returns a random value similar to a roulette table.
 
 ## Installing
 
